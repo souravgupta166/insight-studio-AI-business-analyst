@@ -1,0 +1,10 @@
+
+pandas
+numpy
+duckdb
+python-dotenv
+pydantic
+pytest
+streamlit
+plotly
+sqlglot
