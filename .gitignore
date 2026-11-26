@@ -1,4 +1,8 @@
-﻿# Python
+﻿
+# =========================================================
+# PYTHON
+# =========================================================
+
 __pycache__/
 *.py[cod]
 *.pyd
@@ -6,35 +10,57 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# Virtual environments
+# =========================================================
+# VIRTUAL ENVIRONMENTS
+# =========================================================
+
 .venv/
 venv/
 env/
 
-# Secrets and environment variables
+# =========================================================
+# SECRETS AND ENVIRONMENT VARIABLES
+# =========================================================
+
 .env
 .env.*
 !.env.example
 .streamlit/secrets.toml
 
-# Local databases
+# =========================================================
+# DATABASE FILES
+# =========================================================
+
+# Ignore DuckDB files by default
 *.duckdb
 *.duckdb.wal
 
-# Logs and temporary files
+# Allow the production Olist database to be committed
+!/data/processed/olist.duckdb
+
+# Ignore other processed data artifacts
+/data/processed/**
+!/data/processed/olist.duckdb
+
+# =========================================================
+# RAW DATASETS
+# =========================================================
+
+data/raw/
+
+# =========================================================
+# LOGS AND TEMPORARY FILES
+# =========================================================
+
 *.log
 *.tmp
+logs/
 
-# Operating system and editor files
+# =========================================================
+# OPERATING SYSTEM AND EDITOR FILES
+# =========================================================
+
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
-# Raw datasets and local data artifacts
-data/raw/
-data/processed/
-
-# Local logs
-logs/
-
